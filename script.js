@@ -18,7 +18,19 @@ async function getUser(user){
     const resp = await fetch(APIURL+user);
     const respData = await resp.json();
     console.log(respData);
-    createUserCard(respData);
+    console.log(respData.login);
+    if(respData.login === undefined){
+        document.getElementById("result").innerHTML = `
+        <p class="text-justify">The user does not exist.</p>
+        `;
+    }
+    else{
+        createUserCard(respData);
+    }
+    // if(${respData.message} === "Not Found"){
+
+    // }
+    
 }
 
 function createUserCard(user){
