@@ -22,6 +22,7 @@ async function getUser(user){
 }
 
 function createUserCard(user){
+    const redi = "https://github.com/${user.login}";
     document.getElementById("result").innerHTML = `
 <div class="container mt-5 d-flex justify-content-center">
 <div class="card p-3">
@@ -34,10 +35,16 @@ function createUserCard(user){
                 <div class="d-flex flex-column"> <span class="followers">Following</span> <span class="number2">${user.following}</span> </div>
                 <div class="d-flex flex-column"> <span class="rating">Repos</span> <span class="number3">${user.public_repos}</span> </div>
             </div>
-            <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn-outline-primary w-100">View</button> <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button> </div>
+            <div class="button mt-2 d-flex flex-row align-items-center"> 
+            <button class="btn btn-sm btn-outline-primary w-100" onclick="location.href = 'https://github.com/${user.login}'" >View</button>  
+            </div>
         </div>
     </div>
 </div>
 </div>
     `;
+}
+function redirec(redi){
+    console.log(redi);
+    location.href = redi;
 }
