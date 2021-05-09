@@ -9,7 +9,7 @@ form.addEventListener('submit',onSub);
 function onSub(e){
     e.preventDefault();
     const search = document.getElementById("search").value;
-
+    document.getElementById("result").innerHTML = "";
     getUser(search);
 
 }
