@@ -1,12 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 body{
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg,#2a2a72 0%,#009ffd 74%);
-    font-family: "Poppins",sans-serif;
+    /* background-color: #2a2a72;
+    background-image: linear-gradient(315deg,#2a2a72 0%,#009ffd 74%); */
+    background-color: #B3E5FC;
+    font-family: "Itim",sans-serif;
     margin:0;
     display: flex;
     flex-direction: column;
@@ -14,3 +18,38 @@ body{
     justify-content: center;
     min-height: 100vh;
 }
+.card {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.stats {
+    background: #f2f5f8 !important;
+    color: #000 !important;
+}
+.articles{
+    font-size: 10px;
+    color: #a1aab9;
+}
+.followers {
+    font-size: 10px;
+    color: #a1aab9;
+}
+
+.number2 {
+    font-weight: 500;
+}
+
+.rating {
+    font-size: 10px;
+    color: #a1aab9;
+}
+.number3{
+    font-weight: 500;
+}
+.number1{
+    font-weight: 500;
+}
+
